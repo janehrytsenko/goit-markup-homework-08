@@ -616,7 +616,7 @@ summary {
 }
 
 @media screen and (max-width: 767px) and (min-width: 1200px) {
-  .icon {
+  .contacts-link > .icon {
     width: 16px;
     height: 11px;
     margin-right: 10px;
@@ -624,7 +624,7 @@ summary {
 }
 
 @media screen and (min-width: 768px) {
-  .icon {
+  .contacts-link > .icon {
     width: 14px;
     height: 10px;
     margin-right: 8px;
@@ -634,8 +634,10 @@ summary {
 .hero-content {
   margin-left: auto;
   margin-right: auto;
+  padding-top: 118px;
   max-width: 640px;
   min-height: 400px;
+  text-align: center;
   background-color: #757575;
   background-repeat: no-repeat;
   background-position: center;
@@ -700,16 +702,28 @@ summary {
   margin-right: auto;
 }*/
 .hero-title {
-  /*margin-top: 0;
+  margin-top: 0;
   margin-bottom: 30px;
-  color: $primary-white-color;
-  font-family: $font-family-primary;
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.38;
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
   text-align: center;
+  font-weight: 900;
   letter-spacing: 0.06em;
-  text-transform: uppercase;*/
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 1199px) {
+  .hero-title {
+    font-size: 26px;
+    line-height: 1.62;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero-title {
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }
 
 .backdrop {
@@ -721,6 +735,7 @@ summary {
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 3;
   opacity: 1;
+  overflow-y: scroll;
   -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
