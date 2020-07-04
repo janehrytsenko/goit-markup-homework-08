@@ -1,0 +1,50 @@
+.label-subscription {
+  margin-left: 94px;
+  color: $primary-white-color;
+  font-family: $font-family-primary;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.1;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.form-subscription {
+  display: flex;
+  margin-top: 20px;
+  margin-left: 94px;
+}
+
+.form-subscription input {
+  padding: 18px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  width: 358px;
+  height: 50px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.03em;
+  background-color: #2f303a;
+}
+
+.form-subscription input::placeholder {
+  font-family: $font-family-primary;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.form-subscription button {
+  @extend %button;
+  display: inline-flex;
+  align-items: center;
+  margin-left: 12px;
+  padding-left: 29px;
+  padding-right: 29px;
+}
+
+.icon-send {
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+}
