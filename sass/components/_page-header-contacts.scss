@@ -73,22 +73,19 @@
 .icon {
   display: inline-block;
   padding: 0;
-  width: 16px;
-  height: 11px;
-  margin-right: 10px;
   background-repeat: no-repeat;
   fill: currentColor;
   cursor: pointer;
+
+  @media screen and (max-width: 767px) and (min-width: 1200px) {
+    width: 16px;
+    height: 11px;
+    margin-right: 10px;
+  }
 
   @media screen and (min-width: 768px) {
     width: 14px;
     height: 10px;
     margin-right: 8px;
-  }
-
-  @media screen and (min-width: 1200px) {
-    width: 16px;
-    height: 11px;
-    margin-right: 10px;
   }
 }
