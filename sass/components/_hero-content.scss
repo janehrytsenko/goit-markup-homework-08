@@ -1,12 +1,12 @@
 .hero-content {
-  padding: 0px 15px;
-
   margin-left: auto;
   margin-right: auto;
+  max-width: 640px;
+  min-height: 400px;
   background-color: #757575;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: ;
+  background-size: cover;
   background-image: linear-gradient(
       to right,
       rgba(47, 48, 58, 0.8),
@@ -23,6 +23,8 @@
       url("../images/hero/hero-mobile@2x.jpg");
   }
   @media screen and (min-width: 768px) {
+    max-width: 1024px;
+    min-height: 400px;
     background-image: linear-gradient(
         to right,
         rgba(47, 48, 58, 0.8),
@@ -39,6 +41,9 @@
       url("../images/hero/hero-tablet@2x.jpg");
   }
   @media screen and (min-width: 1200px) {
+    padding-top: 200px;
+    max-width: 1600px;
+    min-height: 600px;
     background-image: linear-gradient(
         to right,
         rgba(47, 48, 58, 0.8),
