@@ -808,10 +808,18 @@ summary {
   letter-spacing: 0.03em;
 }
 
-.products {
-  padding-top: 94px;
-  padding-bottom: 94px;
-  border-top: 1px solid #ececec;
+@media screen and (max-width: 1199px) {
+  .products {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .products {
+    padding-top: 94px;
+    padding-bottom: 94px;
+    border-top: 1px solid #ececec;
+  }
 }
 
 .products-title {
