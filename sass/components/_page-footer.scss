@@ -3,9 +3,33 @@ footer {
 }
 
 .footer-flex {
-  display: flex;
-  padding-top: 48px;
-  align-items: baseline;
+  padding: 60px 0px;
+  @media screen and (max-width: 767px) {
+    display: block;
+  }
+
+  @media screen and (max-width: 1199px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: baseline;
+  }
+}
+
+.footer-info,
+.footer-join {
+  @media screen and (max-width: 767px) {
+    width: 100%;
+    text-align: center;
+  }
+
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
 }
 
 .footer-logo {
@@ -34,7 +58,6 @@ address a {
 .footer-contacts {
   @extend %list;
   display: block;
-  padding-bottom: 46px;
   background-color: #2f303a;
   font-family: $font-family-primary;
   font-weight: 400;
@@ -42,21 +65,32 @@ address a {
   line-height: 1.7;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 60px;
+  }
 }
 
 .footer-contacts-link {
   @extend %link;
-  margin-top: 10px;
+  margin-top: 9px;
 }
 
 /* соцсети */
 
 .footer-join {
-  display: block;
-  margin-left: 69px;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: block;
+    margin-left: 69px;
+  }
 }
 
 .socials-subtitle {
+  margin: 0;
   color: $primary-white-color;
   font-family: $font-family-primary;
   font-weight: 700;
@@ -69,8 +103,12 @@ address a {
 .footer-socials {
   @extend %list;
   display: flex;
-  justify-content: space-between;
   margin-top: 21px;
+  justify-content: center;
+
+  @media screen and (min-width: 1200px) {
+    justify-content: space-between;
+  }
 }
 
 .socials-item {

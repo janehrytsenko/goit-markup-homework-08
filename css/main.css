@@ -1164,13 +1164,51 @@ footer {
 }
 
 .footer-flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding-top: 48px;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  padding: 60px 0px;
+}
+
+@media screen and (max-width: 767px) {
+  .footer-flex {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .footer-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footer-info,
+  .footer-join {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .footer-info,
+  .footer-join {
+    text-align: center;
+  }
 }
 
 .footer-logo {
@@ -1196,7 +1234,6 @@ address a {
 
 .footer-contacts {
   display: block;
-  padding-bottom: 46px;
   background-color: #2f303a;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
@@ -1206,17 +1243,32 @@ address a {
   color: rgba(255, 255, 255, 0.6);
 }
 
+@media screen and (max-width: 1199px) {
+  .footer-contacts {
+    margin-bottom: 60px;
+  }
+}
+
 .footer-contacts-link {
-  margin-top: 10px;
+  margin-top: 9px;
 }
 
 /* соцсети */
-.footer-join {
-  display: block;
-  margin-left: 69px;
+@media screen and (max-width: 767px) {
+  .footer-join {
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-join {
+    display: block;
+    margin-left: 69px;
+  }
 }
 
 .socials-subtitle {
+  margin: 0;
   color: #ffffff;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
@@ -1230,10 +1282,18 @@ address a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   margin-top: 21px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-socials {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 
 .socials-item {
@@ -1271,8 +1331,23 @@ address a {
   fill: #ffffff;
 }
 
-.label-subscription {
-  margin-left: 94px;
+@media screen and (max-width: 1199px) {
+  .form-subscription {
+    display: block;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .form-subscription {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    margin-left: 94px;
+  }
+}
+
+.subtitle-subscription {
   color: #ffffff;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
@@ -1282,27 +1357,48 @@ address a {
   text-transform: uppercase;
 }
 
-.form-subscription {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 20px;
-  margin-left: 94px;
+@media screen and (max-width: 1199px) {
+  .subtitle-subscription {
+    margin: 0;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .subtitle-subscription {
+    margin-left: 94px;
+  }
 }
 
 .form-subscription input {
   padding: 18px 12px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border: 1px solid rgba(255, 255, 255, 0.3);
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-  width: 358px;
   height: 50px;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.03em;
   background-color: #2f303a;
+}
+
+@media screen and (max-width: 1199px) {
+  .form-subscription input {
+    margin-top: 20px;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .form-subscription input {
+    width: 358px;
+  }
 }
 
 .form-subscription input::-webkit-input-placeholder {
@@ -1332,9 +1428,18 @@ address a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-left: 12px;
-  padding-left: 29px;
-  padding-right: 29px;
+}
+
+@media screen and (max-width: 1199px) {
+  .form-subscription button {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .form-subscription button {
+    margin-left: 12px;
+  }
 }
 
 .icon-send {
