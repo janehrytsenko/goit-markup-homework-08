@@ -121,6 +121,7 @@
 
 .form-checkbox {
   display: flex;
+  text-align: center;
   align-items: center;
   justify-content: center;
 }
@@ -158,6 +159,7 @@
 .label-checkbox {
   margin: 0;
   left: 36px;
+  text-align: center;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
@@ -171,24 +173,5 @@
 .button-send {
   @extend %button;
   margin-top: 30px;
-}
-
-.btn-close {
-  display: flex;
-  position: absolute;
-  top: 1%;
-  left: 93%;
-  width: 30px;
-  height: 30px;
-  border: none;
-  border-radius: 50%;
-  background-image: url("../images/modal-icons/btn-close.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  cursor: pointer;
-
-  &:hover,
-  &:focus {
-    fill: var(--accent-color);
-  }
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
