@@ -17,11 +17,23 @@
   }
 }
 
+.examples-animation:hover,
+.examples-animation:focus {
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+
+  &:hover .examples-text,
+  &:focus .examples-text {
+    opacity: 1;
+    transform: translateY(100%);
+    z-index: 3;
+  }
+}
+
 .examples-item {
   @extend %link;
   border-radius: 5px;
   overflow: hidden;
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   @media screen and (min-width: 480px) {
     width: 450px;
@@ -32,9 +44,22 @@
       margin-bottom: 30px;
     }
   }
+}
 
+.examples-item {
   @media screen and (min-width: 768px) {
     width: calc((100% - 4 * 15px) / 2);
+    margin: 15px;
+  }
+
+  &:nth-child(2n) {
+    margin-right: 0px;
+  }
+}
+
+.examples-item {
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 6 * 15px) / 3);
     margin: 15px;
   }
 
@@ -47,19 +72,6 @@
       @media screen and (min-width: 1200px) {
         margin-bottom: 0;
       }
-    }
-
-    &:hover,
-    &:focus {
-      box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16),
-        0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
-      cursor: pointer;
-    }
-
-    &:hover .examples-text,
-    &:focus .examples-text {
-      transform: translateY(-100%);
-      z-index: 3;
     }
   }
 }
@@ -86,8 +98,11 @@
 .examples-text {
   display: inline-flex;
   position: absolute;
-  padding: 63px 24px;
-  margin: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
   font-family: $font-family-primary;
   font-size: 18px;
   line-height: 1.56;
@@ -95,6 +110,15 @@
   background-color: rgba(33, 150, 243, 0.9);
   color: $primary-white-color;
   transition: $transition-form;
+  opacity: 0;
+
+  @media screen and (max-width: 767px) {
+    padding: 77px 24px;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding: 49px 24px;
+  }
 }
 
 .examples-info {
