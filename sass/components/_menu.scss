@@ -2,6 +2,7 @@
   font-family: $font-family-primary;
   font-weight: 500;
   letter-spacing: 0.02em;
+  z-index: 999;
 
   @media screen and (max-width: 767px) {
     display: none;

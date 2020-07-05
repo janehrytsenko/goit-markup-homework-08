@@ -417,6 +417,7 @@ summary {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   letter-spacing: 0.02em;
+  z-index: 999;
 }
 
 @media screen and (max-width: 767px) {
@@ -713,22 +714,59 @@ summary {
   }
 }
 
-.benefits {
-  padding: 94px 0px;
-  margin: auto;
+@media screen and (max-width: 1199px) {
+  .benefits {
+    padding: 60px 0px;
+  }
 }
 
-.benefits-flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+@media screen and (min-width: 1200px) {
+  .benefits {
+    padding: 94px 0px;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .benefits-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: -15px;
+  }
 }
 
 .benefits-item {
-  width: 270px;
-  margin-right: 30px;
+  width: 100%;
+}
+
+@media screen and (min-width: 480px) {
+  .benefits-item {
+    width: 450px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .benefits-item:not(:first-child) {
+    margin-top: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .benefits-item {
+    width: 354px;
+    width: calc((100% - 4 * 15px) / 2);
+    margin: 15px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .benefits-item {
+    width: 270px;
+    margin-right: 30px;
+  }
 }
 
 .benefits-item:nth-child(4n) {
@@ -737,7 +775,7 @@ summary {
 
 .benefits-icon {
   display: block;
-  width: 270px;
+  width: 100%;
   height: 120px;
   padding: 25px 100px;
   border-radius: 4px;
@@ -755,6 +793,12 @@ summary {
   font-weight: 700;
   font-size: 14px;
   line-height: 1;
+}
+
+@media screen and (max-width: 767px) {
+  .benefits-subtitle {
+    text-align: center;
+  }
 }
 
 .benefits-text {
