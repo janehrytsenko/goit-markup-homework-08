@@ -131,6 +131,7 @@
   padding: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
+  text-align: center;
 
   &:checked + .icon-checkbox,
   &:checked:focus + .icon-checkbox {
@@ -157,7 +158,7 @@
   left: 36px;
   text-align: center;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.71;
 }
 

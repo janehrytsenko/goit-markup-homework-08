@@ -13,25 +13,38 @@
 
   <body>
     <!-- Шапка сайта -->
-    <header class="portfolio-header">
+    <header class="page-header">
       <div class="container">
-        <div class="header-flex">
-          <nav class="site-nav">
-            <a lang="en" href="./index.html" class="logo"
+        <nav class="site-nav">
+            <a class="link logo" lang="en" href="./index.html" 
               ><span class="web">Web</span> Studio</a
             >
+            <button 
+            type="button" 
+            class="menu-button"
+            aria-expanded="false"
+            aria-controls="menu"
+            data-menu-button
+            >
+            <svg
+              width="40"
+              height="40"
+              aria-label="Переключатель мобильного меню"
+            >
+              <use class="icon-closed" href="./images/sprite.svg#icon-menu-closed"></use>
+              <use class="icon-opened" href="./images/sprite.svg#icon-menu-opened"></use>
+            </svg>
+            </button>
+            <div class="menu" id="menu" data-menu>
             <ul class="main-nav list">
               <li><a href="./index.html" class="link">Студия</a></li>
-              <li>
-                <a href="./portfolio.html" class="link current">Портфолио</a>
-              </li>
+              <li><a href="./portfolio.html" class="link current"><span class="link-name current">Портфолио</span></a></li>
               <li><a href="" class="link">Контакты</a></li>
             </ul>
-          </nav>
           <ul class="contacts list">
             <li class="contacts-item">
               <a class="contacts-link" href="mailto:info@devstudio.com">
-                <svg class="icon envelope" width="16" height="11">
+                <svg class="icon envelope">
                   <use href="./images/sprite.svg#envelope"></use>
                 </svg>
                 info@devstudio.com
@@ -39,18 +52,20 @@
             </li>
             <li class="contacts-item">
               <a class="contacts-link" href="tel:380961111111">
-                <svg class="icon smartphone" width="10" height="15">
+                <svg class="icon smartphone">
                   <use href="./images/sprite.svg#smartphone"></use>
                 </svg>
                 +38 096 111 11 11</a
               >
             </li>
           </ul>
-        </div>
+          </div>
+      </nav>
       </div>
     </header>
     <main>
-      <section class="portfolio container">
+      <section class="portfolio">
+        <div class="container">
         <h1 class="portfolio-title">Портфолио</h1>
         <!-- Фильтры -->
         <div class="portfolio nav-filters">
@@ -65,12 +80,17 @@
           <li class="examples-item">
             <a>
               <div class="box">
+                <div class="thumb">
                 <img
-                  src="./images/examples/notebook.jpg"
-                  alt="Открытый веб-сайт на экране ноутбука"
-                  width="380"
-                  class="image"
+                  class="img-card"
+        srcset="
+          ./images/portfolio/card1.jpg 1x,
+          ./images/portfolio/card1@2x.jpg 2x
+        "
+        src="./images/portfolio/card1.jpg"
+        alt="Открытый веб-сайт на экране ноутбука"
                 />
+                </div>
                 <p class="examples-text">
                   Технокряк это современная площадка распространения
                   коронавируса. Компании используют эту платформу для цифрового
@@ -86,12 +106,17 @@
           <li class="examples-item">
             <a>
               <div class="box">
+                <div class="thumb">
                 <img
-                  src="./images/examples/poster.jpg"
-                  alt="Дизайн постера с баскетболистами"
-                  width="380"
-                  class="image"
+                  class="img-card"
+        srcset="
+          ./images/portfolio/card2.jpg 1x,
+          ./images/portfolio/card2@2x.jpg 2x
+        "
+        src="./images/portfolio/card2.jpg"
+        alt="Дизайн постера с баскетболистами"
                 />
+                </div>
                 <p class="examples-text">
                   Технокряк это современная площадка распространения
                   коронавируса. Компании используют эту платформу для цифрового
@@ -100,7 +125,7 @@
               </div>
               <div class="examples-info">
                 <h2 class="examples-title">
-                  Постер New Orlean vs Golden Stars
+                  <span>Постер New Orlean vs Golden Stars</span>
                 </h2>
                 <p class="examples-subtitle">Дизайн</p>
               </div>
@@ -109,12 +134,17 @@
           <li class="examples-item">
             <a>
               <div class="box">
+                <div class="thumb">
                 <img
-                  src="./images/examples/seafood.jpg"
-                  alt="Приложение для ресторана с морской кухней"
-                  width="380"
-                  class="image"
+                  class="img-card"
+        srcset="
+          ./images/portfolio/card3.jpg 1x,
+          ./images/portfolio/card3@2x.jpg 2x
+        "
+        src="./images/portfolio/card3.jpg"
+        alt="Приложение для ресторана с морской кухней"
                 />
+                <div class="thumb">
                 <p class="examples-text">
                   Технокряк это современная площадка распространения
                   коронавируса. Компании используют эту платформу для цифрового
@@ -130,12 +160,17 @@
           <li class="examples-item">
             <a>
               <div class="box">
+                <div class="thumb">
                 <img
-                  src="./images/examples/headphones.jpg"
-                  alt="Наушники"
-                  width="380"
-                  class="image"
+                  class="img-card"
+        srcset="
+          ./images/portfolio/card4.jpg 1x,
+          ./images/portfolio/card4@2x.jpg 2x
+        "
+        src="./images/portfolio/card4.jpg"
+        alt="Наушники"
                 />
+                </div>
                 <p class="examples-text">
                   Технокряк это современная площадка распространения
                   коронавируса. Компании используют эту платформу для цифрового
@@ -151,12 +186,17 @@
           <li class="examples-item">
             <a>
               <div class="box">
+                <div class="thumb">
                 <img
-                  src="./images/examples/boxes.jpg"
-                  alt="Приложение Боксес"
-                  width="380"
-                  class="image"
+                  class="img-card"
+        srcset="
+          ./images/portfolio/card5.jpg 1x,
+          ./images/portfolio/card5@2x.jpg 2x
+        "
+        src="./images/portfolio/card5.jpg"
+        alt="Приложение Боксес"
                 />
+                </div>
                 <p class="examples-text">
                   Технокряк это современная площадка распространения
                   коронавируса. Компании используют эту платформу для цифрового
@@ -172,12 +212,17 @@
           <li class="examples-item">
             <a>
               <div class="box">
+                <div class="thumb">
                 <img
-                  src="./images/examples/imac.jpg"
-                  alt="Веб-сайт на экране монитора"
-                  width="380"
-                  class="image"
-                />
+                  class="img-card"
+        srcset="
+          ./images/portfolio/card6.jpg 1x,
+          ./images/portfolio/card6@2x.jpg 2x
+        "
+        src="./images/portfolio/card6.jpg"
+        alt="Веб-сайт на экране монитора"
+                  />
+                </div>
                 <p class="examples-text">
                   Технокряк это современная площадка распространения
                   коронавируса. Компании используют эту платформу для цифрового
@@ -193,12 +238,17 @@
           <li class="examples-item">
             <a>
               <div class="box">
+                <div class="thumb">
                 <img
-                  src="./images/examples/limited-edition.jpg"
-                  alt="Дизайн для издания в виде открытой книги"
-                  width="380"
-                  class="image"
+                  class="img-card"
+        srcset="
+          ./images/portfolio/card7.jpg 1x,
+          ./images/portfolio/card7@2x.jpg 2x
+        "
+        src="./images/portfolio/card7.jpg"
+        alt="Дизайн для издания в виде открытой книги"
                 />
+                </div>
                 <p class="examples-text">
                   Технокряк это современная площадка распространения
                   коронавируса. Компании используют эту платформу для цифрового
@@ -214,12 +264,17 @@
           <li class="examples-item">
             <a>
               <div class="box">
+                <div class="thumb">
                 <img
-                  src="./images/examples/lab.jpg"
-                  alt="Белый лэйб с английскими буквами названия проекта маркетинга"
-                  width="380"
-                  class="image"
+                  class="img-card"
+        srcset="
+          ./images/portfolio/card8.jpg 1x,
+          ./images/portfolio/card8@2x.jpg 2x
+        "
+        src="./images/portfolio/card8.jpg"
+        alt="Белый лэйб с английскими буквами названия проекта маркетинга"
                 />
+                </div>
                 <p class="examples-text">
                   Технокряк это современная площадка распространения
                   коронавируса. Компании используют эту платформу для цифрового
@@ -235,12 +290,17 @@
           <li class="examples-item">
             <a>
               <div class="box">
+                <div class="thumb">
                 <img
-                  src="./images/examples/laptop.jpg"
-                  alt="Открытое приложение на экране ноутбука"
-                  width="380"
-                  class="image"
+                  class="img-card"
+        srcset="
+          ./images/portfolio/card9.jpg 1x,
+          ./images/portfolio/card9@2x.jpg 2x
+        "
+        src="./images/portfolio/card9.jpg"
+        alt="Открытое приложение на экране ноутбука"
                 />
+                </div>
                 <p class="examples-text">
                   Технокряк это современная площадка распространения
                   коронавируса. Компании используют эту платформу для цифрового
@@ -254,6 +314,7 @@
             </a>
           </li>
         </ul>
+        </div>
       </section>
     </main>
     <!-- Футер -->
@@ -329,14 +390,12 @@
                   aria-label="Ссылка на LinkedIn"
                 >
                   <svg class="social-icon footer" width="20" height="20">
-                    <use href="./images/sprite.svg#linkedin"></use></svg
-                ></a>
+                    <use href="./images/sprite.svg#linkedin"></use></svg></a>
               </li>
             </ul>
           </div>
           <form class="form js-speaker-form" autocomplete="off">
-        <label for="mail" class="label-subscription">подпишитесь на рассылку</label>
-        </br>
+            <p class="subtitle-subscription">подпишитесь на рассылку</p>    
         <div class="form-subscription">
         <input
           type="email"
@@ -347,22 +406,83 @@
         <button type="submit">Подписаться<svg class="icon-send">
           <use href="./images/sprite.svg#send"></use></svg>
         </button>
+      </form>
       </div>
     </footer>
-    <script>
-      (() => {
-        document
-          .querySelector('.js-speaker-form')
-          .addEventListener('submit', e => {
-            e.preventDefault();
-
-            new FormData(e.currentTarget).forEach((value, name) =>
-              console.log(`${name}: ${value}`),
-            );
-
-            e.currentTarget.reset();
-          });
-      })();
-    </script>
+    <div class="backdrop is-hidden" data-backdrop>
+      <form class="modal js-speaker-form" autocomplete="off">
+        <h2 class="form-title">Оставьте свои данные, мы вам перезвоним</h2>
+        <div class="form-field">
+          <span class="form-icon">
+            <svg class="icon-modal-mail" width=15 height=12>
+              <use href="./images/sprite.svg#icon-modal-name"></use>
+            </svg>
+          </span>
+          <input
+          type="text"
+          class="form-input"
+          name="name"
+          id="name"
+          placeholder=" "
+          />
+          <label for="name" class="form-label">Имя</label>
+        </div>
+        <div class="form-field">
+      <span class="form-icon">
+        <svg class="icon-modal-mail" width=15 height=12>
+           <use href="./images/sprite.svg#icon-modal-phone"></use>
+          </svg>
+      </span>
+      <input
+          type="tel"
+          class="form-input"
+          name="telephone"
+          id="telephone"
+          placeholder=" "
+        />
+        <label for="telephone" class="form-label">Телефон</label>
+      </div>
+      <div class="form-field">
+        <span class="form-icon">
+          <svg class="icon-modal-mail" width=15 height=12>
+           <use href="./images/sprite.svg#icon-modal-mail"></use>
+          </svg>
+        </span>
+        <input
+          type="email"
+          class="form-input"
+          name="mail"
+          id="mail"
+          placeholder=" "
+        />
+        <label for="mail" class="form-label">Почта</label>
+      </div>
+      <div class="form-field-comment">
+        <textarea
+          class="form-textarea"
+          name="comment"
+          id="comment"
+          rows="8"
+          placeholder=" "
+        ></textarea>
+        <label for="comment" class="form-comment">Комментарий</label>
+      </div>
+       <label class="form-checkbox">
+              <input
+                class="input-checkbox"
+                type="checkbox"
+                name="term"
+                value="term"
+              />
+            <span class="icon-checkbox"></span>
+            <span class="label-checkbox">Соглашаюсь с рассылкой и принимаю
+              <a class="text-link" href="">Условия договора</a></span>
+            </label>
+      <button class="button-send">Отправить</button>
+              <button class="btn-close" data-close-modal></button>
+            </form>
+      </div>
+          </div>
+     <script src="./js/menu.js"></script>
   </body>
 </html>
