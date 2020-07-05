@@ -13,10 +13,31 @@
 }
 
 .nav-filters {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 0px;
+  @extend %list;
+  @media screen and (max-width: 767px) and (min-width: 320px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    padding: 0px;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.portfolio-button li {
+  @media screen and (max-width: 767px) and (min-width: 320px) {
+    margin-right: 8px;
+  }
+
+  &:nth-child(-n + 3) {
+    @media screen and (max-width: 767px) and (min-width: 320px) {
+      margin-bottom: 15px;
+    }
+  }
 }
 
 .portfolio-button {
