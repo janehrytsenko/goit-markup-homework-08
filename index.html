@@ -523,7 +523,6 @@
           </div>
           <form class="form js-speaker-form" autocomplete="off">
         <label for="mail" class="label-subscription">подпишитесь на рассылку</label>
-        </br>
         <div class="form-subscription">
         <input
           type="email"
@@ -534,10 +533,12 @@
         <button type="submit">Подписаться<svg class="icon-send">
           <use href="./images/sprite.svg#send"></use></svg>
         </button>
+        </form>
       </div>
     </footer>
     <div class="backdrop is-hidden" data-backdrop>
       <form class="modal js-speaker-form" autocomplete="off">
+        <button class="btn-close" data-close-modal></button>
         <h2 class="form-title">Оставьте свои данные, мы вам перезвоним</h2>
         <div class="form-field">
           <span class="form-icon">
@@ -605,8 +606,7 @@
             <span class="label-checkbox">Соглашаюсь с рассылкой и принимаю
               <a class="text-link" href="">Условия договора</a></span>
             </label>
-      <button class="button-send">Отправить</button>
-              <button class="btn-close" data-close-modal></button>
+      <button class="button-send">Отправить</button>  
             </form>
       </div>
      <script src="./js/modal.js"></script>

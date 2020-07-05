@@ -335,6 +335,7 @@ summary {
 
 .page-header {
   position: relative;
+  width: 100%;
 }
 
 .site-nav {
