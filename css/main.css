@@ -1916,6 +1916,12 @@ li .portfolio-button:hover, li .portfolio-button:focus {
   }
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .examples-item:nth-child(n + 8) {
+    margin-bottom: 0px;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .examples-item {
     width: calc((100% - 6 * 15px) / 3);
