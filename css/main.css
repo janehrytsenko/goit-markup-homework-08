@@ -1543,7 +1543,7 @@ address a {
 
 @media screen and (min-width: 320px) and (max-width: 479px) {
   .btn-close {
-    top: 20%;
+    top: 13%;
     right: 5%;
   }
 }
