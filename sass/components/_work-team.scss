@@ -67,14 +67,6 @@
   @media screen and (min-width: 1200px) {
     width: calc((100% - 8 * 15px) / 4);
   }
-
-  &:nth-child(4n) {
-    margin-right: 0px;
-  }
-}
-
-.workers-item:nth-child(4n) {
-  margin-right: 0px;
 }
 
 .thumb {

@@ -121,6 +121,10 @@
   transition: $transition-form;
   opacity: 0;
 
+  @media screen and (max-width: 479px) and (min-width: 320px) {
+    padding: 93px 24px;
+  }
+
   @media screen and (max-width: 767px) {
     padding: 77px 24px;
   }
